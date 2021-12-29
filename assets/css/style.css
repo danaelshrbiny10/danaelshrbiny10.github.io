@@ -837,6 +837,8 @@ section {
 # Contact
 --------------------------------------------------------------*/
 
+
+/*
 .contact {
     padding-bottom: 130px;
 }
@@ -1026,6 +1028,21 @@ section {
         transform: rotate(360deg);
     }
 }
+
+
+
+
+.contact .icon {
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+} */
 
 
 /*--------------------------------------------------------------
