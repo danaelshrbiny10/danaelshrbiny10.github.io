@@ -1,0 +1,3 @@
+- contact form
+- resume [add pdf file]
+- darkmode
