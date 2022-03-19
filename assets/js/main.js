@@ -1,9 +1,20 @@
-/**
- * Template Name: iPortfolio - v3.7.0
- * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+//light-dark mode section
+// const modeBtn = document
+//     .querySelector("light-dark-mode-container")
+//     .addEventListener("click", function() {
+//         const everuthing = document.querySelectorAll('*');
+//         const projectTiles = document.querySelectorAll('.project-tiles-overlay');
+//         everything.forEach((item) => {
+//             item.classList.toggle('dark');
+//         });
+//         projectTiles.forEach((item) => {
+//             item.classList.toggle('dark');
+//         })
+//     });
+
+
+
+
 (function() {
     "use strict";
 
