@@ -1,3 +1,0 @@
-- add discord
-- update about
-- show themes [color pages or add button color theme]
