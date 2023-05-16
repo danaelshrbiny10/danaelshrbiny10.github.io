@@ -37,7 +37,91 @@
     <link href="assets/img/touch.png" rel="icon">
     <link href="assets/img/touch.png" rel="apple-touch-icon">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+
+    <!-- <script type="text/javascript">
+        window.onload = function() {
+
+            var dps = [{
+                x: 1,
+                y: 10
+            }, {
+                x: 2,
+                y: 13
+            }, {
+                x: 3,
+                y: 18
+            }, {
+                x: 4,
+                y: 20
+            }, {
+                x: 5,
+                y: 17
+            }, {
+                x: 6,
+                y: 10
+            }, {
+                x: 7,
+                y: 13
+            }, {
+                x: 8,
+                y: 18
+            }, {
+                x: 9,
+                y: 20
+            }, {
+                x: 10,
+                y: 17
+            }]; //dataPoints. 
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: "Live Data"
+                },
+                axisX: {
+                    title: "Axis X Title"
+                },
+                axisY: {
+                    title: "Units"
+                },
+                data: [{
+                    type: "line",
+                    dataPoints: dps
+                }]
+            });
+
+            chart.render();
+            var xVal = dps.length + 1;
+            var yVal = 15;
+            var updateInterval = 1000;
+
+            var updateChart = function() {
+
+
+                yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
+                dps.push({
+                    x: xVal,
+                    y: yVal
+                });
+
+                xVal++;
+                if (dps.length > 10) {
+                    dps.shift();
+                }
+
+                chart.render();
+
+                // update chart after specified time. 
+
+            };
+
+            setInterval(function() {
+                updateChart()
+            }, updateInterval);
+        }
+    </script> -->
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
 
 
@@ -51,128 +135,61 @@
             <h1><a href="">Dana Elshrbiny</a></h1>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link active" href="#header">Home</a></li>
                     <li><a class="nav-link" href="#about">About</a></li>
                     <li><a class="nav-link" href="#resume">Resume</a></li>
                     <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
+
             </nav>
-            <div class="row">
-                <div class="col-md-6">
-                    <canvas id="myChartline"></canvas>
-                </div>
-                <div class="col-md-6">
-                    <canvas id="myChartBar"></canvas>
-                </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/danaelshrbiny " class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/danaelshrbiny10 " class="github"><i class="bi bi-github"></i></a>
+                <a href="https://discord.com/users/967800456271257640" class="discord"><i class="bi bi-discord"></i></a>
+                <a href="https://wa.link/ytzmqp" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-            <script>
-                var endpoint = '/api';
-
-                $.ajax({
-                    method: "GET",
-                    url: endpoint,
-                    success: function(data) {
-                        drawLineGraph(data, 'myChartline');
-                        drawBarGraph(data, 'myChartBar');
-                        console.log("drawing");
-                    },
-                    error: function(error_data) {
-                        console.log(error_data);
-                    }
-                })
-
-
-                function drawLineGraph(data, id) {
-                    var labels = data.labels;
-                    var chartLabel = data.chartLabel;
-                    var chartdata = data.chartdata;
-                    var ctx = document.getElementById(id).getContext('2d');
-                    var chart = new Chart(ctx, {
-                        // The type of chart we want to create
-                        type: 'line',
-
-                        // The data for our dataset
-                        data: {
-                            labels: labels,
-                            datasets: [{
-                                label: chartLabel,
-                                backgroundColor: 'rgb(255, 100, 200)',
-                                borderColor: 'rgb(55, 99, 132)',
-                                data: chartdata,
-                            }]
-                        },
-
-                        // Configuration options go here
-                        options: {
-                            scales: {
-                                xAxes: [{
-                                    display: true
-                                }],
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-
-                    });
-                }
-
-                function drawBarGraph(data, id) {
-                    var labels = data.labels;
-                    var chartLabel = data.chartLabel;
-                    var chartdata = data.chartdata;
-                    var ctx = document.getElementById(id).getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: labels,
-                            datasets: [{
-                                label: chartLabel,
-                                data: chartdata,
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                }
-            </script>
         </div>
-
     </header>
 
     <!-- End Header -->
+    <!-- <section id="home" class="home"> -->
 
+    <!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        <script>
+            const xValues = [progress];
+
+            new Chart("myChart", {
+                type: "line",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                        borderColor: "red",
+                        fill: false
+                    }, {
+                        data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                        borderColor: "green",
+                        fill: false
+                    }, {
+                        data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                        borderColor: "blue",
+                        fill: false
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+        </script> -->
+    <!-- <div id="chartContainer" style="height: 300px; width: 100%;">
+        </div> -->
+    <!-- </section> -->
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
         <div class="about-me container">
@@ -530,14 +547,16 @@
             <div class="section-title">
                 <h2>Contact</h2>
             </div>
-
+            <br>
+            <br>
+            <br>
             <div class="row mt-2">
 
                 <div class="col-md-6 d-flex align-items-stretch">
                     <div class="info-box">
                         <i class="bx bx-map"></i>
                         <h3>My Address</h3>
-                        <p>Egypt,cairo</p>
+                        <p>Egypt, cairo</p>
                     </div>
                 </div>
 
@@ -549,7 +568,7 @@
                             <a href="https://www.linkedin.com/in/danaelshrbiny/ " class="linkedin"><i class="bi bi-linkedin"></i></a>
                             <a href="https://github.com/danaelshrbiny10" class="bi-github"><i class="bi bi-bi-github"></i></a>
                             <a href="https://discord.com/users/967800456271257640" class="bi-discord"><i class="bi bi-bi-discord"></i></a>
-                            <a href="https://alx-students.slack.com/archives/D04JNSBBGSK" class="bi-slack"><i class="bi bi-bi-slack"></i></a>
+                            <a href="https://wa.link/ytzmqp" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
 
                         </div>
                     </div>
@@ -571,7 +590,7 @@
                 </div>
             </div>
 
-            <form action="mailto:contact@danaelshrbiny.com " method="post" role="form" class="php-email-form mt-4">
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -584,15 +603,15 @@
                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-group mt-3">
-                    <textarea name="message " rows=" " class="form-control " id="message " placeholder="Message "></textarea>
+                    <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message" required></textarea>
                 </div>
                 <div class="my-3">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center" type="submit " value="Send "><button type="submit">Send Message</button></div>
-            </form>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+            </form> -->
 
         </div>
     </section>
