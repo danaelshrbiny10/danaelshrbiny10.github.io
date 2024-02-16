@@ -39,88 +39,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-
-    <!-- <script type="text/javascript">
-        window.onload = function() {
-
-            var dps = [{
-                x: 1,
-                y: 10
-            }, {
-                x: 2,
-                y: 13
-            }, {
-                x: 3,
-                y: 18
-            }, {
-                x: 4,
-                y: 20
-            }, {
-                x: 5,
-                y: 17
-            }, {
-                x: 6,
-                y: 10
-            }, {
-                x: 7,
-                y: 13
-            }, {
-                x: 8,
-                y: 18
-            }, {
-                x: 9,
-                y: 20
-            }, {
-                x: 10,
-                y: 17
-            }]; //dataPoints. 
-
-            var chart = new CanvasJS.Chart("chartContainer", {
-                title: {
-                    text: "Live Data"
-                },
-                axisX: {
-                    title: "Axis X Title"
-                },
-                axisY: {
-                    title: "Units"
-                },
-                data: [{
-                    type: "line",
-                    dataPoints: dps
-                }]
-            });
-
-            chart.render();
-            var xVal = dps.length + 1;
-            var yVal = 15;
-            var updateInterval = 1000;
-
-            var updateChart = function() {
-
-
-                yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-                dps.push({
-                    x: xVal,
-                    y: yVal
-                });
-
-                xVal++;
-                if (dps.length > 10) {
-                    dps.shift();
-                }
-
-                chart.render();
-
-                // update chart after specified time. 
-
-            };
-
-            setInterval(function() {
-                updateChart()
-            }, updateInterval);
-        }
-    </script> -->
+    </script>
     <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
 
@@ -146,6 +65,9 @@
             </nav>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/danaelshrbiny " class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="https://linktr.ee/danaelshrbiny" class="linktree">
+                    <i class="bi bi-link"></i>
+                </a>
                 <a href="https://github.com/danaelshrbiny10 " class="github"><i class="bi bi-github"></i></a>
                 <a href="https://discord.com/users/967800456271257640" class="discord"><i class="bi bi-discord"></i></a>
                 <a href="https://wa.link/ytzmqp" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
@@ -155,41 +77,8 @@
     </header>
 
     <!-- End Header -->
-    <!-- <section id="home" class="home"> -->
 
-    <!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
-        <script>
-            const xValues = [progress];
-
-            new Chart("myChart", {
-                type: "line",
-                data: {
-                    labels: xValues,
-                    datasets: [{
-                        data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
-                        borderColor: "red",
-                        fill: false
-                    }, {
-                        data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
-                        borderColor: "green",
-                        fill: false
-                    }, {
-                        data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
-                        borderColor: "blue",
-                        fill: false
-                    }]
-                },
-                options: {
-                    legend: {
-                        display: false
-                    }
-                }
-            });
-        </script> -->
-    <!-- <div id="chartContainer" style="height: 300px; width: 100%;">
-        </div> -->
-    <!-- </section> -->
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
         <div class="about-me container">
@@ -198,17 +87,12 @@
                 <h2>About</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/img/dana.jpg" class="img-fluid" alt="">
-                </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Software Engineer</h3>
+                    <h3>Software Engineer & Data Scientist</h3>
                     <p>
-                        A Software engineer with huge knowledge and proficiency in Python, PHP, JavaScript, C and C# programming languages .. also had an experience in a backend development using python frameworks like Flask and Django. I am passionate about Developing Large-scale
-                        Systems, Linux and Open-source Software. I am interested in AI field and made many projects using machine learning, deep learning, NLP and computer vision and work on integrate my models with my work. also interested in Robotics
-                        and IoT and implement some automatic circuits and learn more about micro controllers.
+                        Experienced Software Engineer proficient in building software, and skilled Data Scientist adept at creating data models and analyzing data to identify trends and patterns.
                         <div class="custom-btn-group mt-4" style="border-radius: 50%;">
-                            <a href="https://drive.google.com/file/d/1wPaXAZ2kLmdpFLozIHXic46FNQy0K5SZ/view?usp=sharing" button class="btn btn-outline-success" style="color:#ffff,background-color#18D26E ">
+                            <a href="https://drive.google.com/file/d/1n0j0YoLfMYfBI3TkbIDw0l5UfJs4Grru/view?usp=drive_link" button class="btn btn-outline-success" style="color:#ffff,background-color#18D26E ">
                     My Resume</button>
                     </a>
                         </div>
@@ -222,95 +106,111 @@
             <div class="section-title">
                 <h2>Skills</h2>
             </div>
+
             <div class="row skills-content">
 
                 <div class="col-lg-6">
 
-                    <div class="progress">
-                        <span class="skill">python <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="section-titles-container">
+                        <div class="section-title">
+                            <h2>Programming Languages</h2>
                         </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">C <i class="val">80%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">C# <i class="val">70%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">javascript <i class="val">70%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">php <i class="val">50%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">Arduino <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
 
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>C/c++</li>
+                            <li>C#</li>
+                        </ul>
+
+                        <div class="section-title">
+                            <h2>Frameworks and Stack Tools</h2>
+                        </div>
+
+                        <ul class="skills-list">
+                            <li>Django</li>
+                            <li>Django rest framework DRF</li>
+                            <li>Flask</li>
+                            <li>Flask Restx</li>
+                            <li>Flask Restx</li>
+                            <li>FastAPI</li>
+                            <li>Celery</li>
+                            <li>Scrapy</li>
+                            <li>scikit learn</li>
+                            <li>Kafka</li>
+                            <li>Hadoop</li>
+                            <li>Big Data</li>
+                            <li>Data Mining</li>
+                        </ul>
+
+                        <div class="section-title">
+                            <h2>Web Development Technologies</h2>
+                        </div>
+
+                        <ul class="skills-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Bootstrap5</li>
+                            <li>JavaScript</li>
+                        </ul>
+
+                    </div>
+
+                </div>
 
                 <div class="col-lg-6">
 
-                    <div class="progress">
-                        <span class="skill">Django <i class="val">95%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="section-titles-container">
+                        <div class="section-title">
+                            <h2>AI/ML Technologies</h2>
                         </div>
-                    </div>
 
-                    <div class="progress">
-                        <span class="skill">Flask <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
+                        <ul class="skills-list">
+                            <li>Machine Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Natural Language Processing (NLP)</li>
+                            <li>Computer Vision</li>
+                        </ul>
 
-                    <div class="progress">
-                        <span class="skill">Data science <i class="val">80%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="section-title">
+                            <h2>Databases</h2>
                         </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">machine learning <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">deep learning <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">NLP <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
 
+                        <ul class="skills-list">
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Cassandra</li>
+                            <li>Data Warehouse</li>
+                            <li>Firebase</li>
+                            <li>SQLite3</li>
+                        </ul>
+
+                        <div class="section-title">
+                            <h2>DevOps</h2>
+                        </div>
+
+                        <ul class="skills-list">
+                            <li>AWS EC2</li>
+                            <li>Docker</li>
+                            <li>Docker Compose</li>
+                            <li>Heroku</li>
+                        </ul>
+
+                        <div class="section-title">
+                            <h2>Development Tools</h2>
+                        </div>
+
+                        <ul class="skills-list">
+                            <li>Git</li>
+                            <li>Linux/Unix</li>
+                            <li>Bash</li>
+                            <li>ZSH</li>
+                        </ul>
+                    </div>
 
                 </div>
 
             </div>
-
         </div>
 
     </section>
@@ -327,61 +227,57 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h3 class="resume-title">Sumary</h3>
-                    <div class="resume-item pb-0">
-                        <p>
-                            A Software engineer with huge knowledge and proficiency in Python, PHP, JavaScript, C and C# programming languages .. also had an experience in a backend development using python frameworks like Flask and Django. I am passionate about Developing Large-scale
-                            Systems, Linux and Open-source Software.
-                        </p>
-
-                        <p>
-                            I am interested in AI field and made many projects using machine learning, deep learning, NLP and computer vision and work on integrate my models with my work.
-                        </p>
-
-                        <p>
-                            also interested in Robotics and IoT and implement some automatic circuits and learn more about micro controllers.
-                        </p>
-
-                        <p>
-                            <ul>
-                                <li>Cairo, Egypt</li>
-                                <li>(+20) 1010341989</li>
-                                <li>contact@danaelshrbiny.com</li>
-                            </ul>
-                        </p>
-                    </div>
-
                     <h3 class="resume-title">Education</h3>
+                    <div class="resume-item">
+
+                        <h4>Helwan University Cairo</h4>
+
+                        <h5>2023/10 – present</h5>
+
+                        <p><em>Master’s Degree in Data Science (Artificial Intelligence).</em></p>
+
+                    </div>
                     <div class="resume-item">
 
                         <h4>Kafr El-Sheikh University</h4>
 
-                        <h5>Sep.2022 - present</h5>
+                        <h5>2022/10 – 2023/06</h5>
 
                         <p><em>PGCE - post graduate diploma in computer science & Engineering (CSE)</em></p>
 
                         <p>
 
-                            • Graduation project : Podcast Website.
+                            • Grade: Excellent
+
+                        </p>
+                        <p>
+
+                            • Graduation Project: Podcast Website
+
+                        </p>
+                        <p>
+
+                            • Graduation project grade: Excellent
 
                         </p>
 
                     </div>
+
                     <div class="resume-item">
                         <h4>Higher Institute of Engineering and Technology - Kafr ELsheikh</h4>
                         <h5>Oct.2017 - May.2021</h5>
+
                         <p><em>Bachelor's degree in computer science and engineering </em></p>
                         <p>
-                            • Grade: Excellent with honors with a cumulative percentage of 92.37%
+                            • Grade: Excellent with honors with a cumulative percentage of 92.37% Ranked 7th in class.
                         </p>
 
                         <p>
-                            • Graduation Project: APC (Automated Price Comparison) A Platform designed to track different products on the biggest Ecommerce in MENA.
-                        </p>
+                            • Graduation Project:
 
-                        <p>
-                            • Graduation project grade: Excellent.
-                        </p>
+                            <p>
+                                • Graduation project grade: Excellent.
+                            </p>
                     </div>
 
                 </div>
@@ -391,77 +287,56 @@
 
                         <h4>Software Engineer</h4>
 
-                        <h5>Jan.2023 - present</h5>
+                        <h5>2023/10 – present</h5>
 
-                        <p><em>ALX, Nairobi County, Kenya</em></p>
-
+                        <p><em>Root Company</em></p>
                     </div>
                     <div class="resume-item">
 
                         <h4>AI Engineer</h4>
 
-                        <h5>Jan.2023 - Mar.2023</h5>
+                        <h5>2023/01 – 2023/03</h5>
 
                         <p><em>Children's Cancer Hospital Foundation 57357, Egypt</em></p>
+                    </div>
+                    <div class="resume-item">
 
+                        <h4>Deep learning engineer</h4>
+
+                        <h5>2023/03 – 2023/03</h5>
+
+                        <p><em>Personal detection (freelance)</em></p>
+                    </div>
+
+                    <div class="resume-item">
+
+                        <h4>Full stack Developer</h4>
+
+                        <h5>2022/08 – 2022/10</h5>
+
+                        <p><em>Naqua Water Parameters (freelance)</em></p>
                     </div>
 
                     <div class="resume-item">
                         <h4>Software Engineer</h4>
-                        <h5>Jan.2022 - Dec.2022</h5>
-                        <p><em>MegaDev, Tanta, Al Gharbiyah, Egypt</em></p>
-                        <p>
-                            <ul>
-                                <li> contributed to development many projects </li>
-                            </ul>
-                        </p>
+                        <h5>2022/01 – 2023/01</h5>
+                        <p><em>MegaDev Software</em></p>
                     </div>
                     <div class="resume-item">
 
                         <h4>python Instructor</h4>
 
-                        <h5>Aug.2022 - Aug.2022</h5>
+                        <h5>2022/08 – 2022/08</h5>
 
-                        <p><em>Tanta, Al Gharbiyah, Egypt </em></p>
-
-                        <p>
-
-                            <ul>
-
-                                <li>A summer training event at Faculty of Computers and Informatics ,Tanta University.</li>
-
-                                <li>Talks about #python, #Flask, #problem_solving and #web_development</li>
-
-                            </ul>
-
-                        </p>
+                        <p><em>faculty of computer science and informatics, tanta university</em></p>
 
                     </div>
-                    <div class="resume-item">
-
-                        <h4>Full-stack Developer</h4>
-
-                        <h5>Aug.2022 - Sep.2022</h5>
-
-                        <p><em>Aqualytics UK Ltd, Saudi Arabia</em></p>
-
-                        <p>
-
-                            <ul>
-
-                                <li> NWP is a web application to monitor and manage NAQUA's data collection for water parameters in fish PGO. </li>
-
-                                <li> It allows to login users that belong to the AD group nwp.</li>
-
-                            </ul>
-
-                        </p>
-
-                    </div>
-
 
                 </div>
+
+
             </div>
+        </div>
 
         </div>
     </section>
@@ -604,6 +479,9 @@
                         <h3>Social Profiles</h3>
                         <div class="social-links">
                             <a href="https://www.linkedin.com/in/danaelshrbiny/ " class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://linktr.ee/danaelshrbiny" class="linktree">
+                                <i class="bi bi-link"></i>
+                            </a>
                             <a href="https://github.com/danaelshrbiny10" class="bi-github"><i class="bi bi-bi-github"></i></a>
                             <a href="https://discord.com/users/967800456271257640" class="bi-discord"><i class="bi bi-bi-discord"></i></a>
                             <a href="https://wa.link/ytzmqp" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
@@ -615,7 +493,7 @@
                     <div class="info-box">
                         <i class="bx bx-envelope"></i>
                         <h3>Email Me</h3>
-                        <p>contact@danaelshrbiny.com</p>
+                        <p>danaelshrbiny55@gmail.com.com</p>
                     </div>
                 </div>
                 <div class="col-md-6 mt-4 d-flex align-items-stretch">
@@ -627,31 +505,9 @@
                 </div>
             </div>
 
-            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                </div>
-                <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-            </form> -->
-
         </div>
     </section>
+
     <!-- End Contact Section -->
 
     <div class="credits">
